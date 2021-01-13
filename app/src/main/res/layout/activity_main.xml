@@ -27,19 +27,12 @@
         android:orientation="vertical"
         android:background="@color/colorPrimaryDark" >
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:overScrollMode="never"
+            android:layout_margin="50px"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="50px"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:overScrollMode="never"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
+            android:layout_height="match_parent"/>
 
         <ImageView
             android:layout_width="100px"
