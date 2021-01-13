@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:overScrollMode="never"
     tools:context=".MainActivity"
-    android:fillViewport="true">
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="200px"
+        android:background="@color/colorPrimary" >
 
-        <com.zhy.autolayout.AutoLinearLayout
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="50px"
+            android:text="@string/app_name" />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="650px"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark" >
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200px"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:background="@color/colorPrimary" >
+            android:layout_height="match_parent"
+            android:padding="50px"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="50px"
-                android:text="@string/app_name" />
-
-        </com.zhy.autolayout.AutoLinearLayout>
-
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="650px"
-            android:orientation="vertical"
-            android:background="@color/colorPrimaryDark" >
-
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:overScrollMode="never"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="50px"
-                android:orientation="vertical">
+                android:layout_height="match_parent"/>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:overScrollMode="never"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+        </LinearLayout>
 
-            </LinearLayout>
+        <ImageView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:paddingRight="10px"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_centerVertical="true"/>
 
-            <ImageView
-                android:layout_width="100px"
-                android:layout_height="100px"
-                android:paddingRight="10px"
-                android:src="@drawable/ic_arrow_left"
-                android:layout_centerVertical="true"/>
+        <ImageView
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:paddingLeft="10px"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
 
-            <ImageView
-                android:layout_width="100px"
-                android:layout_height="100px"
-                android:paddingLeft="10px"
-                android:src="@drawable/ic_arrow_right"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
 
-        </com.zhy.autolayout.AutoRelativeLayout>
+    <com.zhy.autolayout.AutoFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@color/colorAccent" />
 
-        <com.zhy.autolayout.AutoFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="110px"
-            android:background="@color/colorAccent" />
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="@color/colorPrimary2" >
 
-        <com.zhy.autolayout.AutoFrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="200px"
-            android:background="@color/colorPrimary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="50px"
+            android:text="News" />
 
-        <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="650px"
-            android:background="@color/colorPrimaryDark" />
+    </com.zhy.autolayout.AutoRelativeLayout>
 
-        <com.zhy.autolayout.AutoRelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="110px"
-            android:background="@color/colorAccent" />
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="650px"
+        android:background="@color/colorPrimaryDark2" />
 
-    </LinearLayout>
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@color/colorAccent2" />
 
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
